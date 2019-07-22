@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Boolzapp - </title>
     <link rel="stylesheet" href="master.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <main>
@@ -39,7 +40,9 @@
 
             <!-- sezione delle conversazioni -->
             <section class="conversazioni">
+              <div class="list_chat">
 
+              </div>
             </section>
           </div>
 
@@ -66,10 +69,28 @@
           </div>
 
           <!-- parte della chat vera e propria -->
-          <section class="messaggistica">
+          <div class="cont_messaggi">
+            <section class="messaggistica">
 
-          </section>
+            </section>
+          </div>
+            <section class="inserimento_mex">
+              <div class="first_item">
+                <a href="#"><img src="image/smile.png" alt="emoticon"></a>
+              </div>
+              <div class="second_item">
+                <input type="text" name="text" placeholder="Scrivi un messaggio">
+              </div>
+              <div class="last_item">
+                <a href="#" class="active first"><img src="image/mic.png" alt="emoticon"></a>
+                <a href="#"class="last"><img src="image/invio.png" alt="emoticon"></a>
+              </div>
         </section>
+
+        <div id="template">
+          <span class="mex_inviato"></span>
+        </div>
+      </section>
 
       </div>
 

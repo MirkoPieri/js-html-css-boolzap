@@ -37,6 +37,7 @@ main {
   display: flex;
   justify-content: space-between;
   background-color: #EAEAEA;
+  height: 80px;
 }
 
 .nav_up .image_account img {
@@ -66,6 +67,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
+  height: 80px;
 }
 
 .col_sx .chat_sx .notifiche_attivation .text {
@@ -83,6 +85,7 @@ main {
 /* sezione input */
 .chat_sx .input_section {
   background-color: #FAFAFA;
+  height: 50px;
 }
 
 .chat_sx .input_section input {
@@ -97,6 +100,19 @@ main {
   border-radius: 5px;
  }
 
+ .chat_sx .conversazioni {
+   max-height: calc(100vh - 250px);
+   width: 100%;
+   background: red;
+   overflow-y: scroll;
+ }
+
+ .chat_sx .conversazioni .list_chat {
+   height: 1000px;
+   width: 100%;
+   background-color: blue;
+ }
+
 /* colonna destra */
 .col_dx .dx .image_account .text_dx {
   font-family: Verdana;
@@ -106,4 +122,75 @@ main {
   color: gray;
   font-size: 10pt;
   padding-top: 5px;
+}
+
+/* parte dei messsaggi */
+.col_dx .cont_messaggi {
+  height: calc(100vh - 200px);
+  overflow-y: scroll;
+  background-image: url("image/chatsfondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.col_dx .messaggistica {
+  width: 100%;
+}
+
+.messaggistica .mex_inviato {
+  position: relative;
+  height: 40px;
+  max-width: 10%;
+  background-color: #D5F9BA;
+  display: block;
+  padding: 10px 10px;
+  margin: 30px;
+  border-radius: 10px;
+  left: 80%;
+}
+
+.col_dx .inserimento_mex {
+  height: 80px;
+  width: 100%;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col_dx .inserimento_mex .first_item {
+  width: 10%;
+  padding: 30px;
+}
+
+.col_dx .inserimento_mex .last_item {
+  width: 10%;
+  padding: 30px;
+
+}
+
+.col_dx .inserimento_mex .last_item a {
+  display: none;
+}
+
+.col_dx .inserimento_mex .last_item .active {
+  display: block;
+}
+
+.col_dx .inserimento_mex .second_item {
+  width: 80%;
+}
+
+.col_dx .inserimento_mex input {
+  height: 50px;
+  border: 1px solid lightgray;
+  padding-left: 30px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+/* parte da clonare per input */
+#template {
+  display: none;
 }
