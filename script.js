@@ -1,11 +1,13 @@
 $( document ).ready(function() {
 
 // logica per inserimento messaggio da parte dell'utente
+// logica per sostituzione icona microfono e invia
 $(".second_item input").click( function() {
   $(".last_item .first").removeClass("active");
   $(".last_item .last").addClass("active");
 });
 
+// logica per stampare testo inserito come messaggio su schermo
   $(".last_item a").click(function() {
     var inserimentoUtente = $(".second_item input").val();
     var clone_span = $("#template .mex_inviato").clone();
@@ -19,8 +21,6 @@ $(".second_item input").click( function() {
     $(".last_item .first").addClass("active");
   });
 
-  // var valueUtente = $("input").value();
-  // console.log(valueUtente);
 
 
 
