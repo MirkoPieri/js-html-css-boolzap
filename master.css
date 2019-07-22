@@ -1,3 +1,4 @@
+/* definizioni generali */
 * {
   margin: 0;
   padding: 0;
@@ -28,4 +29,81 @@ main {
   width: 70%;
   height: 100%;
   background: white;
+}
+
+/* definizioni colonna sinistra */
+/* sezione dei pulsanti */
+.nav_up {
+  display: flex;
+  justify-content: space-between;
+  background-color: #EAEAEA;
+}
+
+.nav_up .image_account img {
+  max-height: 50px;
+  max-width: 50px;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+.nav_up .pulsanti_sx, .nav_up .image_account {
+  display: flex;
+  align-items: center;
+}
+
+.col_sx .sx .pulsanti_sx {
+  border-right: 1px solid lightgray;
+}
+
+.nav_up .pulsanti_sx img {
+  margin: 10px;
+}
+
+/* sezione delle chat */
+.col_sx .chat_sx .notifiche_attivation {
+  background-color: #8EDAFC;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.col_sx .chat_sx .notifiche_attivation .text {
+  margin-left: 10px;
+  font-family: Verdana;
+  font-size: 11pt;
+}
+
+.col_sx .chat_sx .notifiche_attivation .text a {
+  color: gray;
+  font-size: 10pt;
+  padding-top: 5px;
+}
+
+/* sezione input */
+.chat_sx .input_section {
+  background-color: #FAFAFA;
+}
+
+.chat_sx .input_section input {
+  width: 90%;
+  height: 30px;
+  padding-left: 40px;
+  margin: 10px;
+  border: 1px solid lightgray;
+  background-image: url("image/search.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+ }
+
+/* colonna destra */
+.col_dx .dx .image_account .text_dx {
+  font-family: Verdana;
+}
+
+.col_dx .dx .image_account .text_dx p {
+  color: gray;
+  font-size: 10pt;
+  padding-top: 5px;
 }
