@@ -149,6 +149,11 @@ main {
   left: 80%;
 }
 
+.messaggistica p {
+  text-align: right;
+  color: lightgray;
+}
+
 .col_dx .inserimento_mex {
   height: 80px;
   width: 100%;

@@ -9,6 +9,7 @@ $(".second_item input").click( function() {
   $(".last_item a").click(function() {
     var inserimentoUtente = $(".second_item input").val();
     var clone_span = $("#template .mex_inviato").clone();
+    var clone_orario = $("#template p")
     clone_span.text(inserimentoUtente);
     console.log(clone_span);
     $(".messaggistica").append(clone_span);
