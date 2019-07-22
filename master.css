@@ -6,7 +6,9 @@
 }
 
 main {
-  background-color: lightgreen;
+  background-image: url("image/sfondo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
   padding: 20px 0;
 }
