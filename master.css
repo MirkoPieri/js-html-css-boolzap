@@ -105,15 +105,64 @@ main {
  .chat_sx .conversazioni {
    max-height: calc(100vh - 250px);
    width: 100%;
-   background: red;
+   background: white;
    overflow-y: scroll;
  }
 
  .chat_sx .conversazioni .list_chat {
    height: 1000px;
    width: 100%;
-   background-color: blue;
+   background-color: white;
  }
+
+  .chat_sx .conversazioni .list_chat .contact {
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+  }
+
+  .chat_sx .conversazioni .list_chat .contact:hover {
+    background-color: lightgray;
+  }
+
+    .chat_sx .conversazioni .list_chat .contact .foto {
+      width: 20%;
+    }
+
+    .chat_sx .conversazioni .list_chat .contact .nome {
+      width: 60%;
+    }
+
+    .chat_sx .conversazioni .list_chat .contact .orario {
+      width: 20%;
+    }
+
+  .chat_sx .conversazioni .list_chat .foto img {
+    max-height: 60px;
+    max-width: 60px;
+    border-radius: 30px;
+    margin: 20px;
+  }
+
+  .chat_sx .conversazioni .list_chat .nome p {
+    font-family: Verdana;
+    margin: 30px 10px 0 10px;
+  }
+
+  .chat_sx .conversazioni .list_chat .nome span {
+    font-family: Verdana;
+    margin: 0 10px;
+    font-size: 10pt;
+    color: gray;
+  }
+
+  .chat_sx .conversazioni .list_chat .orario p {
+    padding: 30px 10px;
+    font-size: 10pt;
+    color: gray;
+    text-align: right;
+  }
 
 /* colonna destra */
 .col_dx .dx .image_account .text_dx {
@@ -148,6 +197,16 @@ main {
   margin: 30px;
   border-radius: 10px;
   left: 70%;
+  word-wrap: break-word;
+}
+
+.messaggistica .mex_ricevuto {
+  max-width: 20%;
+  background-color: white;
+  display: block;
+  padding: 10px 10px;
+  margin: 30px;
+  border-radius: 10px;
 }
 
 .messaggistica p {
