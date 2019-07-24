@@ -126,6 +126,10 @@ main {
     background-color: lightgray;
   }
 
+  .chat_sx .conversazioni .list_chat .contact:focus {
+    background: green;
+  }
+
     .chat_sx .conversazioni .list_chat .contact .foto {
       width: 20%;
     }
@@ -188,25 +192,33 @@ main {
   width: 100%;
 }
 
+.messaggistica div {
+  display: none;
+}
+
 .messaggistica .mex_inviato {
   position: relative;
   max-width: 20%;
   background-color: #D5F9BA;
   display: block;
-  padding: 10px 10px;
-  margin: 30px;
+  padding: 15px 20px;
+  margin: 40px 100px 40px 0;
   border-radius: 10px;
   left: 70%;
   word-wrap: break-word;
+  font-weight: bold;
+  font-size: 15pt;
 }
 
 .messaggistica .mex_ricevuto {
   max-width: 20%;
   background-color: white;
   display: block;
-  padding: 10px 10px;
-  margin: 30px;
+  padding: 15px 20px;
+  margin: 40px 100px;
   border-radius: 10px;
+  font-weight: bold;
+  font-size: 15pt;
 }
 
 .messaggistica p {
@@ -254,7 +266,9 @@ main {
   border-radius: 10px;
 }
 
-
+div.view_chat {
+  display: block;
+}
 /* parte da clonare per input */
 #template {
   display: none;
