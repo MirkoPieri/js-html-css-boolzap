@@ -1,5 +1,13 @@
 $( document ).ready(function() {
 
+
+  var img = $(".n1").children(".contact").children(".foto").html();
+  console.log(img);
+  $(".dx .image_account .image_C").append(img);
+
+  var name = $(".n1").children(".contact").children(".nome").children("p").html();
+  console.log(name);
+  $(".dx .image_account .text_dx > span").append(name);
 // logica per inserimento messaggio da parte dell'utente
 // logica per sostituzione icona microfono e invia
 $(".second_item input").click( function() {
@@ -10,7 +18,8 @@ $(".last_item .last").addClass("active");
 $(".list_chat > div").click(function() {
   $(".messaggistica > div").removeClass("view_chat");
   var classe = $(this).attr("class");
-
+  $(".dx .image_account .image_C .logo").remove();
+  $(".dx .image_account .text_dx span").text(" ");
   $(".messaggistica > div").each(function() {
     var attrChat = $(this).attr("class");
     // console.log("questo lalala" + attrChat);
@@ -19,10 +28,13 @@ $(".list_chat > div").click(function() {
     };
   });
 
-  var img = $(".contact .foto").html();
+  var img = $(this).children(".contact").children(".foto").html();
   console.log(img);
-  $(".dx .image_account").append(img);
+  $(".dx .image_account .image_C").append(img);
 
+  var name = $(this).children(".contact").children(".nome").children("p").html();
+  console.log(name);
+  $(".dx .image_account .text_dx > span").append(name);
 
 });
   // seleziono la foto del contatto
