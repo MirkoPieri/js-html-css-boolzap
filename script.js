@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-
+  // stadio iniziale pagina
   var img = $(".n1").children(".contact").children(".foto").html();
   console.log(img);
   $(".dx .image_account .image_C").append(img);
@@ -14,7 +14,7 @@ $(".second_item input").click( function() {
 $(".last_item .first").removeClass("active");
 $(".last_item .last").addClass("active");
 });
-
+// logica per visualizzazione della chat al click
 $(".list_chat > div").click(function() {
   $(".messaggistica > div").removeClass("view_chat");
   var classe = $(this).attr("class");
@@ -23,11 +23,13 @@ $(".list_chat > div").click(function() {
   $(".messaggistica > div").each(function() {
     var attrChat = $(this).attr("class");
     // console.log("questo lalala" + attrChat);
+    // controllo per corrispondenza classe del click con chat da visualizzare
     if (attrChat == classe) {
       $(this).addClass("view_chat");
     };
   });
 
+  // definizione per sostituire immagine a seconda della chat visualizzata
   var img = $(this).children(".contact").children(".foto").html();
   console.log(img);
   $(".dx .image_account .image_C").append(img);
