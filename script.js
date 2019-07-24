@@ -18,11 +18,13 @@ $(".list_chat > div").click(function() {
       $(this).addClass("view_chat");
     };
   });
-  console.log("classe " + classe);
 
-//   var image 
-//   $("image_account").val("foto");
-// });
+  var img = $(".contact .foto").html();
+  console.log(img);
+  $(".dx .image_account").append(img);
+
+
+});
   // seleziono la foto del contatto
   // var fotoc = $(this).val("");
   // console.log(fotoc);
