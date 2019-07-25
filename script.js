@@ -8,14 +8,19 @@ $( document ).ready(function() {
   var name = $(".n1").children(".contact").children(".nome").children("p").html();
   console.log(name);
   $(".dx .image_account .text_dx > span").append(name);
+
 // logica per inserimento messaggio da parte dell'utente
 // logica per sostituzione icona microfono e invia
 $(".second_item input").click( function() {
 $(".last_item .first").removeClass("active");
 $(".last_item .last").addClass("active");
 });
+
+
 // logica per visualizzazione della chat al click
 $(".list_chat > div").click(function() {
+ $(".list_chat > div").css("border", "none");
+  $(this).css("border", "5px solid gray");
   $(".messaggistica > div").removeClass("view_chat");
   var classe = $(this).attr("class");
   $(".dx .image_account .image_C .logo").remove();
@@ -50,8 +55,9 @@ $(".list_chat > div").click(function() {
   // clone_inviato.text("Ciao, come va?");
   // $(".messaggistica .view_chat").append(clone_inviato);
 
+
   // logica per stampare testo inserito come messaggio su schermo
-    $(".last_item .last").click(function() {
+    $(".last_item .last").click(function sendmsg() {
       var inserimentoUtente = $(".second_item input").val();
       var clone_span = $("#template .mex_inviato").clone();
       clone_span.text(inserimentoUtente);
@@ -96,5 +102,19 @@ $(".list_chat > div").click(function() {
     //     }
     //   });
     // });
+
+    $(".input_section input").keyup(function() {
+      var tasto = $(this).val().toLowerCase();
+      console.log("questa è la lettera " + tasto);
+
+      $(".list_chat div .contact").each(function() {
+        $(this).show();
+        var contattoTrovato = $(this).find(".nome p").text().toLowerCase();
+          console.log("questa è il contatto " + contattoTrovato);
+        if (!contattoTrovato.includes(tasto)) {
+          $(this).hide();
+        }
+      });
+    });
 
 });
