@@ -55,9 +55,8 @@ $(".list_chat > div").click(function() {
   // clone_inviato.text("Ciao, come va?");
   // $(".messaggistica .view_chat").append(clone_inviato);
 
-
   // logica per stampare testo inserito come messaggio su schermo
-    $(".last_item .last").click(function sendmsg() {
+    $(".last_item .last").click(function() {
       var inserimentoUtente = $(".second_item input").val();
       var clone_span = $("#template .mex_inviato").clone();
       clone_span.text(inserimentoUtente);
@@ -103,10 +102,11 @@ $(".list_chat > div").click(function() {
     //   });
     // });
 
+    // funzione per ricerca contatti in base alle lettere digitate
     $(".input_section input").keyup(function() {
       var tasto = $(this).val().toLowerCase();
       console.log("questa è la lettera " + tasto);
-
+      // ricerca corrispondenza fra le lettere digitate e quelle presenti nei nomi contatti
       $(".list_chat div .contact").each(function() {
         $(this).show();
         var contattoTrovato = $(this).find(".nome p").text().toLowerCase();
