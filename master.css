@@ -208,7 +208,12 @@ main {
   word-wrap: break-word;
   font-weight: bold;
   font-size: 15pt;
+  position: relative;
 }
+
+/* .messaggistica .mex_inviato p {
+  display: block;
+} */
 
 .messaggistica .mex_ricevuto {
   max-width: 20%;
@@ -219,6 +224,7 @@ main {
   border-radius: 10px;
   font-weight: bold;
   font-size: 15pt;
+  position: relative;
 }
 
 .messaggistica p {
@@ -264,6 +270,16 @@ main {
   padding-left: 30px;
   width: 100%;
   border-radius: 10px;
+}
+
+.delete_message {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+
+.freccia {
+  display: none;
 }
 
 div.view_chat {

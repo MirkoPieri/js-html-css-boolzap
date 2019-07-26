@@ -56,7 +56,47 @@ $(".list_chat > div").click(function() {
   // $(".messaggistica .view_chat").append(clone_inviato);
 
   // logica per stampare testo inserito come messaggio su schermo
-    $(".last_item .last").click(function() {
+    $(".last_item .last").click(myfunction); 
+    // {
+    //   var inserimentoUtente = $(".second_item input").val();
+    //   var clone_span = $("#template .mex_inviato").clone();
+    //   clone_span.text(inserimentoUtente);
+    //   console.log(clone_span);
+    //   $(".messaggistica .view_chat").append(clone_span);
+    //
+    //   $(".second_item input").val("");
+    //   $(".last_item .last").removeClass("active");
+    //   $(".last_item .first").addClass("active");
+    //
+    //   // variabile per salvare ultimo accesso
+    //   var orarioContact = $(".text_dx .orario_accesso");
+    //   // funzione per rispondere automaticamente al messaggio inviato
+    //   setTimeout(function(){
+    //     orarioContact.text("Sta scrivendo...");
+    //     var clone_inviato = $("#template .mex_ricevuto").clone();
+    //     clone_inviato.text("Ok");
+    //     $(".messaggistica .view_chat").append(clone_inviato);
+    //     // funzione per mettere ultimo accesso con data corrente
+    //     setTimeout(function(){
+    //       var date = new Date();
+    //       var hH = date.getHours();
+    //       var mM = date.getMinutes();
+    //       if (mM < 10) {
+    //         mM = "0" + mM;
+    //       }
+    //       orarioContact.text("Ultimo accesso alle ore " + hH + ":" + mM);
+    //     }, 500);
+    //   }, 1000);
+    // });
+
+    // invio testo alla pressione del tasto invio
+    $(".second_item input").keyup(function() {
+      if (event.which == 13) {
+        myfunction();
+      }
+    });
+    // funzione per invio messaggio alla pressione del tasto invio
+    function myfunction() {
       var inserimentoUtente = $(".second_item input").val();
       var clone_span = $("#template .mex_inviato").clone();
       clone_span.text(inserimentoUtente);
@@ -86,8 +126,15 @@ $(".list_chat > div").click(function() {
           orarioContact.text("Ultimo accesso alle ore " + hH + ":" + mM);
         }, 500);
       }, 1000);
-    });
-
+    };
+    // $(".messaggistica .view_chat .mex_inviato").hover(function() {
+    //   $(".messaggistica .view_chat .mex_inviato p").css("display", "block");
+    // });
+    //
+    // $(".mex_inviato p").on("click", function() {
+    //   var clone_freccia = $("#template .delete_message").clone();
+    //   $(".messaggistica .view_chat span").appen(clone_freccia);
+    // });
     // $(".chat_sx .input_section input").keyup(function() {
     //   var tasto = $(this).val().toLowerChase();
     //
