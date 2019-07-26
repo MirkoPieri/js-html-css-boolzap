@@ -56,7 +56,7 @@ $(".list_chat > div").click(function() {
   // $(".messaggistica .view_chat").append(clone_inviato);
 
   // logica per stampare testo inserito come messaggio su schermo
-    $(".last_item .last").click(myfunction); 
+    $(".last_item .last").click(myfunction);
     // {
     //   var inserimentoUtente = $(".second_item input").val();
     //   var clone_span = $("#template .mex_inviato").clone();
@@ -98,23 +98,43 @@ $(".list_chat > div").click(function() {
     // funzione per invio messaggio alla pressione del tasto invio
     function myfunction() {
       var inserimentoUtente = $(".second_item input").val();
-      var clone_span = $("#template .mex_inviato").clone();
-      clone_span.text(inserimentoUtente);
-      console.log(clone_span);
-      $(".messaggistica .view_chat").append(clone_span);
+      // var clone_span = $("#template .mex_inviato").clone();
+      // clone_span.text(inserimentoUtente);
+      // console.log(clone_span);
+      // $(".messaggistica .view_chat").append(clone_span);
+      var source = document.getElementById("entry-template").innerHTML;
+      var template = Handlebars.compile(source);
+      console.log(source);
+
+      var context = {title: inserimentoUtente};
+      console.log(context);
+      var html = template(context);
+
+      $(".messaggistica .view_chat").append(html);
 
       $(".second_item input").val("");
       $(".last_item .last").removeClass("active");
       $(".last_item .first").addClass("active");
+
 
       // variabile per salvare ultimo accesso
       var orarioContact = $(".text_dx .orario_accesso");
       // funzione per rispondere automaticamente al messaggio inviato
       setTimeout(function(){
         orarioContact.text("Sta scrivendo...");
-        var clone_inviato = $("#template .mex_ricevuto").clone();
-        clone_inviato.text("Ok");
-        $(".messaggistica .view_chat").append(clone_inviato);
+        // var clone_inviato = $("#template .mex_ricevuto").clone();
+        // clone_inviato.text("Ok");
+        // $(".messaggistica .view_chat").append(clone_inviato);
+
+        var source = document.getElementById("entry-template1").innerHTML;
+        var template = Handlebars.compile(source);
+        console.log(source);
+
+        var context = {mex: "Ok", eliminazione: "Elimina il messaggio", info: "Info messaggio"};
+        console.log(context);
+        var html = template(context);
+
+        $(".messaggistica .view_chat").append(html);
         // funzione per mettere ultimo accesso con data corrente
         setTimeout(function(){
           var date = new Date();
@@ -127,28 +147,17 @@ $(".list_chat > div").click(function() {
         }, 500);
       }, 1000);
     };
-    // $(".messaggistica .view_chat .mex_inviato").hover(function() {
-    //   $(".messaggistica .view_chat .mex_inviato p").css("display", "block");
-    // });
-    //
-    // $(".mex_inviato p").on("click", function() {
-    //   var clone_freccia = $("#template .delete_message").clone();
-    //   $(".messaggistica .view_chat span").appen(clone_freccia);
-    // });
-    // $(".chat_sx .input_section input").keyup(function() {
-    //   var tasto = $(this).val().toLowerChase();
-    //
-    //
-    //   $(".contact .nome").each(function() {
-    //     var nomeChat = $(this).text().toLowerChase();
-    //     $(".contact .nome").show();
-    //
-    //     if(!nomeChat.includes(tasto)) {
-    //       $(".contact .nome").hide();
-    //     }
-    //   });
+
+
+    // $(".messaggistica .view_chat .mex_inviato").on("mouseenter", function() {
+    //   $(".view_chat .mex_inviato .view_image").css("display", "block");
     // });
 
+    // $(".messaggistica .mex_inviato .view_image").on("click", function() {
+    //   $(".messaggistica .mex_inviato .delete_message").css("display", "block");
+    // });
+
+    
     // funzione per ricerca contatti in base alle lettere digitate
     $(".input_section input").keyup(function() {
       var tasto = $(this).val().toLowerCase();

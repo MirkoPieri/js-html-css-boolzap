@@ -192,13 +192,13 @@ main {
   width: 100%;
 }
 
-.messaggistica div {
+.messaggistica .delete_message {
   display: none;
 }
 
 .messaggistica .mex_inviato {
   position: relative;
-  max-width: 20%;
+  width: 20%;
   background-color: #D5F9BA;
   display: block;
   padding: 15px 20px;
@@ -210,10 +210,6 @@ main {
   font-size: 15pt;
   position: relative;
 }
-
-/* .messaggistica .mex_inviato p {
-  display: block;
-} */
 
 .messaggistica .mex_ricevuto {
   max-width: 20%;
@@ -278,14 +274,18 @@ main {
   position: absolute;
 }
 
-.freccia {
-  display: none;
+.mex_inviato img {
+  display: block;
+  position: relative;
+  left: 65%;
 }
+
+
 
 div.view_chat {
   display: block;
 }
 /* parte da clonare per input */
-#template {
+#entry-template {
   display: none;
 }
