@@ -5,6 +5,7 @@
     <title>Boolzapp - </title>
     <link rel="stylesheet" href="master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
   </head>
   <body>
     <main>
@@ -250,16 +251,38 @@
         </section>
 
         <!-- sezione da usare come clone -->
-        <div id="template">
+        <script id="entry-template" type="text/x-handlebars-template">
+          <div class="mex_inviato">
+            {{title}}
+            <div class="view_image">
+              <img src='image/frecciabasso.png'>
+            </div>
+            <div class="delete_message">
+              <span>{{eliminazione}}</span>
+              <p>{{info}}</p>
+            </div>
+          </div>
+        </script>
+
+        <script id="entry-template1" type="text/x-handlebars-template">
+          <span class="mex_ricevuto">
+            {{mex}}
+          </span>
+          <div class="delete_message">
+            <span>{{eliminazione}}</span>
+            <p>{{info}}</p>
+          </div>
+        </script>
+
+        <!-- <div id="template">
             <span class="mex_inviato"></span>
             <span class="mex_ricevuto"></span>
             <div class="delete_message">
               <span>Elimina messaggio</span>
               <p>Info messaggio</p>
             </div>
-        </div>
+        </div> -->
       </section>
-
       </div>
 
 
